@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { CardComponent } from '../Components/CardComponent';
 import { Container } from '@mui/material';
+import { Navbar } from '../Components/Navbar';
 
 const categories = [
   {
@@ -43,8 +44,9 @@ const categories = [
 
 export default function Home() {
   return (
-    <Container>
-      <Container style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-around' }}>
+    <div>
+      <Navbar/>
+      <Container style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-around', width: '100%', height: '90%', marginTop: '5%'}}>
         {
           categories.map((item, index) => {
             return (
@@ -55,6 +57,6 @@ export default function Home() {
           })
         }
       </Container>
-    </Container>
+    </div>
   );
 }

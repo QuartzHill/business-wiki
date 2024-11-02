@@ -15,7 +15,7 @@ export const CardComponent = ({ category, image, description }) => {
   };
 
   return (
-    <Card sx={{ maxWidth: 345, cursor: 'pointer' }} style={{ marginBottom: '5%' }} onClick={handleCardClick}>
+    <Card sx={{ maxWidth: 345, cursor: 'pointer' }} style={{ marginBottom: '3%' }} onClick={handleCardClick}>
       <CardMedia
         component="img"
         alt={category}
