@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/business-wiki/static/css/main.e6c13ad2.css",
-    "main.js": "/business-wiki/static/js/main.cd165a84.js",
+    "main.js": "/business-wiki/static/js/main.a07685be.js",
     "static/js/453.80265fa7.chunk.js": "/business-wiki/static/js/453.80265fa7.chunk.js",
     "static/media/restaurante.jpg": "/business-wiki/static/media/restaurante.c40c30d26f01eda4f6d7.jpg",
     "index.html": "/business-wiki/index.html",
     "main.e6c13ad2.css.map": "/business-wiki/static/css/main.e6c13ad2.css.map",
-    "main.cd165a84.js.map": "/business-wiki/static/js/main.cd165a84.js.map",
+    "main.a07685be.js.map": "/business-wiki/static/js/main.a07685be.js.map",
     "453.80265fa7.chunk.js.map": "/business-wiki/static/js/453.80265fa7.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.cd165a84.js"
+    "static/js/main.a07685be.js"
   ]
 }
