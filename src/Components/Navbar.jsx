@@ -1,31 +1,47 @@
+import { useState } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
+import { useNavigate } from 'react-router-dom';
+import banner from '../assets/banner.png';
 
-export const Navbar = () => {
-    return (
-      <Box sx={{ flexGrow: 1 }}>
-        <AppBar position="static">
-          <Toolbar>
-            <IconButton
-              size="large"
-              edge="start"
-              color="inherit"
-              aria-label="menu"
-              sx={{ mr: 2 }}
-            >
-              <MenuIcon />
-            </IconButton>
-            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-              Quartz Hill
-            </Typography>
-            <Button color="inherit">Login</Button>
-          </Toolbar>
-        </AppBar>
-      </Box>
-    );
-  }
+export const Navbar = ({ width, height }) => {
+
+  const [drawer, setDrawer] = useState(false);
+  const navigate = useNavigate();
+
+  /*
+  const toggleDrawer = (newOpen) => () => {
+    setDrawer(newOpen);
+  };
+*/
+
+  const handleAboutClick = () => {
+    navigate(`/About`);
+  };
+
+  const handleLogoClick = () => {
+    navigate(`/business-wiki`);
+  };
+
+  return (
+    <Box sx={{ flexGrow: 1 }}>
+      <AppBar position="static" sx={{ backgroundColor: '#fff' }}>
+        <Toolbar>
+          <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', height: height * 5 / 100, width: width, marginRight: width * 5 / 100, alignItems: 'center', alignContent: 'center' }}>
+            <div style={{ cursor: 'pointer' }} onClick={handleLogoClick}>
+              <img src={banner} height={height * 20 / 100} width={height * 20 / 100} />
+            </div>
+            <div style={{ height: height * 4 / 100, width: width * 10 / 100, textAlign: 'center', cursor: 'pointer', alignContent: 'center', transition: '0.3s', '&:hover': { boxShadow: 20, transform: 'translateY(-5px)' }, }}
+              onClick={handleAboutClick}>
+              <Typography variant="h8" component="div" sx={{ color: '#000', }}>
+                Acerca de
+              </Typography>
+            </div>
+          </div>
+        </Toolbar>
+      </AppBar>
+    </Box>
+  );
+}
